@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+.row{
+	margin: 0;
+}
+
+.container-fluid{
+	padding: 0;
+}
+.section{
+	width: 90%;
+	margin: 0 auto;
+}
+.previewPic{
+	background-color: yellow; 
+	border: 2px solid black;
+	height: 280px;
+}
+.previewPic:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+.contentPic{
+	background-color: orange; 
+	height: 640px;
+}
+</style>
+<script>
+$(document).ready(function() {
+	$("a[href^='#']").on("click", function(e){
+		var target = $($(this).attr("href"));
+		if(target.length){
+			e.preventDefault();
+			$("html, body").animate({
+				scrollTop: target.offset().top
+			}, 1000);
+		}
+	});
+	
+	$(".previewPic").on("click", function(){
+		$("#previewSection").height($("#previewSection").height());
+		$("#previewContainer").slideUp("slow", function(){
+			$(".content").fadeIn();
+		});
+	});
+	
+	$(".content").on("click", function(){
+		$(".content").fadeOut("slow", function(){
+			$("#previewContainer").slideDown();
+		});
+	});
+});
+
+</script>
+</head>
+<body>
+	<div>
+		<a href="#previewSection">Scroll down</a>
+	</div>
+	<div style="background-color: red; height: 1000px;" class="section">
+		
+	</div>
+	<div style="background-color: blue; height: 1000px;" class="section">
+	
+	</div>
+	<div style="background-color: green;" class="section" id="previewSection">
+		<div id="previewContainer">
+			<div class="row">
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+		
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+		
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+			</div>
+		</div>
+		<div style="display: none;" class="row content">
+			<div class="contentPic col-xs-12"></div>
+		</div>
+	</div>
+</body>
+</html>
