@@ -12,6 +12,7 @@ h1{
 }
 .row{
 	margin: 0;
+	padding: 20px 10px 25px 10px;
 }
 .container-fluid{
 	padding: 0;
@@ -20,23 +21,13 @@ h1{
 	width: 100%;
 	margin: 0 auto;
 }
-.previewPic{
-	background-color: yellow; 
-	border: 2px solid black;
-	height: 280px;
-}
-.previewPic:hover{
-	cursor: pointer;
-	opacity: 0.8;
-}
 .contentPic{
 	background-color: orange; 
 	height: 640px;
 }
 #home{
 	width: 100%;
-	height: 70%;
-	min-height: 400px;
+	height: 500px;
 	background: linear-gradient(135deg, #132160 0%,#70bad1 66%,#F3F3F3 100%);
 	text-align: center;
 }
@@ -51,10 +42,7 @@ h1{
     position: relative;
     background: none;
     font-size: 20px;
-}
-#intro-btn a{
     color: white;
-    text-decoration: none;
 }
 #intro-btn:hover{
     background-color: rgba(69, 116, 157, 0.5);
@@ -90,6 +78,15 @@ h1{
 #navList li a:hover{
 	color: #9343B1;
 }
+.previewImg{
+	width: 100%;
+	height: 280px;
+	margin-top: 25px;
+}
+.previewImg:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
 #logo{
 	width: 150px;
     height: 150px;
@@ -97,7 +94,7 @@ h1{
 	left: 50%;
 	bottom: -25px;
 	margin-left: -75px;
-    background: #FFF url("logo.svg") center no-repeat;
+    background: #FFF url("../img/logo.svg") center no-repeat;
     /*border: 4px solid #8E76D8;*/
     border-radius: 50%;
     z-index: 1;

@@ -1,20 +1,25 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<title>Eric Fonseca</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="scripts.js"></script>
+	<link rel="icon" href="img/favicon.png">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,900,100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/MainController.js"></script>
+	<script src="js/directives/projectInfo.js"></script>
 </head>
-<body>
+<body ng-app="PortfolioApp">
 	<div id="home">
 		<h1 class="intro" style="font-size: 120px; font-weight: 900;">Eric Fonseca</h1>
 		<h2 class="intro" style="font-size: 46px;">Design. Development. Dedication.</h2>
-		<button class="btn" id="intro-btn"><a href="#work">View Work</a></button>
+		<a href="#work" class="btn" id="intro-btn" role="button">View Work</a>
 	</div>
 	
 	<div id="navBar">
@@ -27,22 +32,23 @@
 		</ul>
 	</div>
 	
-	<div style="background-color: green;" class="section" id="work">
+	<div style="background-color: #69AEC8;" class="section" id="work">
 		<div id="previewContainer">
-			<div class="row">
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-		
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-		
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
-				<div class="previewPic col-xs-12 col-sm-6 col-md-4"></div>
+			<div ng-controller="MainController">
+				<div class="row">
+					<div ng-repeat="project in projects" class="col-xs-12 col-sm-6 col-md-4">
+						<img class="previewImg" id="{{project.id}}" ng-src="{{project.icon}}">
+					</div>
+				</div>
 			</div>
 		</div>
+		
+		<div ng-controller="MainController">
+			<div ng-repeat="project in projects" class="details" id="{{project.id}}Details" style="display: none">
+				<project-info info="project"></project-info>
+			</div>
+		</div>
+		
 		<div style="display: none;" class="row content">
 			<div class="contentPic col-xs-12"></div>
 		</div>
