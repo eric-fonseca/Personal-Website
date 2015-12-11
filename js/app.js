@@ -12,11 +12,13 @@ $(document).ready(function() {
 	});
 	
 	$(".previewImg").on("click", function(e){
+		var content = "#" + e.target.id + "Content";
+	
 		$("#previewContainer").slideUp("slow", function(){
-			$("#" + e.target.id + "Details").slideDown("slow");
+			$(content).slideDown("slow");
 			
-			$("#" + e.target.id + "Details").on("click", function(){
-				$("#" + e.target.id + "Details").slideUp("slow", function(){
+			$(content + ", .work").on("click", function(){
+				$(content).slideUp("slow", function(){
 					$("#previewContainer").slideDown();
 				});
 			});

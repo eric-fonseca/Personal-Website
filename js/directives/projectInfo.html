@@ -1,4 +1,5 @@
-<img ng-src="{{info.icon}}" style="width: 640px; height: 480px;">
+<iframe ng-if="info.id === 'superstitions'" src="https://drive.google.com/a/g.rit.edu/file/d/0BwYcAiq3YNSAZDFMY0E1dFlZTVk/preview" width="640" height="480"></iframe>
+<img ng-if="info.id !== 'superstitions'" ng-src="{{info.image}}" style="width: 100%; max-width: 1280px;">
 <h2>{{info.title}}</h2>
-<p>{{info.link}}</p>
-<p>{{info.github}}</p>
+<p ng-if="info.link !== 'None'">{{info.link}}</p>
+<p ng-if="info.github !== 'None'">{{info.github}}</p>
