@@ -1,4 +1,4 @@
-app.controller("MainController", ["$scope", "$sce", function($scope, $sce){
+app.controller("MainController", ["$scope", function($scope){
   $scope.projects = [ 
   { 
   	id: "ecoCalc",
