@@ -58,7 +58,7 @@ app.controller("MainController", ["$scope", function($scope){
   }, 
   { 
   	id: "superstitions",
-    preview: "img/previews/superStitionsPrev.png", 
+    preview: "img/previews/superstitionsPrev.png", 
     image: "None", 
     title: "Superstitions Animated Video", 
     link: "None",
