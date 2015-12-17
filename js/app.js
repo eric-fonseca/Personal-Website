@@ -23,7 +23,7 @@ $(document).ready(function() {
 				scrollTop: $("#work").offset().top
 			}, 700);
 			
-			$(content + ", .work").on("click", function(){
+			$(".work").on("click", function(){
 				$(content).slideUp("slow", function(){
 					$("#previewContainer").slideDown();
 					
@@ -33,5 +33,9 @@ $(document).ready(function() {
 				});
 			});
 		});
+	});
+	
+	$("html, body").on("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+		$('html, body').stop();
 	});
 });

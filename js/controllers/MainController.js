@@ -6,23 +6,26 @@ app.controller("MainController", ["$scope", function($scope){
     image: "img/work/ecoCalc.png", 
     title: "Staples Eco-Office Calculator", 
     link: "http://www-staging.rit.edu/gis/ssil/calculator/",
-    github: "None"
+    github: "None",
+    tags: ["HTML", "SCSS", "JavaScript", "jQuery", "Gulp.js", "Bootstrap", "Illustrator"]
   }, 
   { 
   	id: "jks",
     preview: "img/previews/jksPrev.png", 
     image: "img/work/jks.png", 
     title: "Just Keep Swimming", 
-    link: "None",
-    github: "https://github.com/eric-fonseca/RIT-Maps"
+    link: "projects/JustKeepSwimming/JKS.html",
+    github: "https://github.com/eric-fonseca/Just-Keep-Swimming",
+    tags: ["HTML", "CSS", "JavaScript", "Photoshop"]
   }, 
   { 
   	id: "flicker",
     preview: "img/previews/flickerPrev.png", 
     image: "img/work/flicker.png", 
     title: "Flicker", 
-    link: "None",
-    github: "None"
+    link: "projects/Flicker/FlickerWebPlayer.html",
+    github: "None",
+    tags: ["C#", "Unity", "Photoshop"]
   }, 
   { 
   	id: "moneyTree",
@@ -30,7 +33,8 @@ app.controller("MainController", ["$scope", function($scope){
     image: "img/work/moneyTree.png", 
     title: "Money Tree", 
     link: "None",
-    github: "https://github.com/eric-fonseca/Money-Tree"
+    github: "https://github.com/eric-fonseca/Money-Tree",
+    tags: ["Objective-C", "Xcode", "Photoshop"]
   }, 
   { 
   	id: "tapVsTap",
@@ -38,7 +42,8 @@ app.controller("MainController", ["$scope", function($scope){
     image: "img/work/tapVsTap.png", 
     title: "Tap Vs Tap", 
     link: "None",
-    github: "https://github.com/BKenny11/Tap-Vs-Tap"
+    github: "https://github.com/BKenny11/Tap-Vs-Tap",
+    tags: ["Java", "Android Studio", "Photoshop"]
   }, 
   { 
   	id: "ritMaps",
@@ -46,7 +51,8 @@ app.controller("MainController", ["$scope", function($scope){
     image: "img/work/ritMaps.png", 
     title: "RIT Maps", 
     link: "None",
-    github: "https://github.com/eric-fonseca/RIT-Maps"
+    github: "https://github.com/eric-fonseca/RIT-Maps",
+    tags: ["Objective-C", "Xcode", "JSON"]
   }, 
   { 
   	id: "infoTunes",
@@ -54,7 +60,8 @@ app.controller("MainController", ["$scope", function($scope){
     image: "img/work/infoTunes.png", 
     title: "InfoTunes", 
     link: "None",
-    github: "https://github.com/eric-fonseca/InfoTunes"
+    github: "https://github.com/eric-fonseca/InfoTunes",
+    tags: ["HTML", "CSS", "JavaScript", "jQuery", "Photoshop", "Web API's"]
   }, 
   { 
   	id: "superstitions",
@@ -62,7 +69,8 @@ app.controller("MainController", ["$scope", function($scope){
     image: "None", 
     title: "Superstitions Animated Video", 
     link: "None",
-    github: "None"
+    github: "None",
+    tags: ["After Effects", "Photoshop", "Illustrator"]
   }, 
   { 
   	id: "guessSketch",
@@ -70,7 +78,8 @@ app.controller("MainController", ["$scope", function($scope){
     image: "img/work/guessSketch.png", 
     title: "Guess-A-Sketch", 
     link: "None",
-    github: "https://github.com/eric-fonseca/Guess-A-Sketch"
+    github: "https://github.com/eric-fonseca/Guess-A-Sketch",
+    tags: ["HTML", "CSS", "Jade", "JavaScript", "jQuery", "Node.js", "Photoshop"]
   }
 ]
   

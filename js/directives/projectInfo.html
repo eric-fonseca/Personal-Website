@@ -1,5 +1,14 @@
-<iframe ng-if="info.id === 'superstitions'" src="https://drive.google.com/a/g.rit.edu/file/d/0BwYcAiq3YNSAZDFMY0E1dFlZTVk/preview" width="640" height="480"></iframe>
-<img ng-if="info.id !== 'superstitions'" ng-src="{{info.image}}" style="width: 100%; max-width: 1280px;">
-<h2>{{info.title}}</h2>
-<p ng-if="info.link !== 'None'">{{info.link}}</p>
-<p ng-if="info.github !== 'None'">{{info.github}}</p>
+<div style="text-align: center; padding: 20px 0px">
+	<iframe ng-if="info.id === 'superstitions'" src="https://drive.google.com/a/g.rit.edu/file/d/0BwYcAiq3YNSAZDFMY0E1dFlZTVk/preview" width="640" height="480" style="margin: 0 auto; margin-top: 20px"></iframe>
+	<img ng-if="info.id !== 'superstitions'" ng-src="{{info.image}}" style="width: 100%; max-width: 860px;">
+	<h1 style="margin-bottom: 10px">{{info.title}}</h1>
+	<ul style="list-style:none; padding-left: 0px">
+		<li ng-repeat="tag in info.tags" class="tag">{{tag}}</li>
+	</ul>
+	<div ng-if="info.link !== 'None'" class="btnLink">
+		<a href="{{info.link}}" target="_blank"><img src="img/website.png"/>View Project</a>
+	</div>
+	<div ng-if="info.github !== 'None'" class="btnLink">
+		<a href="{{info.github}}" target="_blank"><img src="img/github.png"/>View Github</a>
+	</div>
+</div>

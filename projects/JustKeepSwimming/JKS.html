@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		body { margin: 0; padding: 0; background: #8AB8E6;}
+		canvas { display: block; margin: 0.5em auto; background: #fff; }
+		@font-face {
+  			font-family: YanoneKaffeesatz;
+  			src: url(fonts/YanoneKaffeesatz-Regular.otf);
+		}
+	</style>
+	<title>Just Keep Swimming</title>
+</head>
+<body>
+	<canvas width='640' height='480'>
+		Get a real browser!
+	</canvas>
+	<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+	<script src="http://code.createjs.com/soundjs-0.5.2.min.js"></script>
+	<script src="js/loader.js"></script>
+	<script src="js/jks.js"></script>
+	<script src="js/fish.js"></script>
+	<script src="js/drawLib.js"></script>
+	<script src="js/food.js"></script>
+	<script src="js/shark.js"></script>
+	
+	<center>
+	
+	<div>
+		<INPUT TYPE="button" onClick="history.go(0)" VALUE="Main Menu">&nbsp;&nbsp;&nbsp;
+		<label>Difficulty: 
+			<select id="difficultyChooser">
+				<option value="Easy">Easy</option>
+				<option value="Medium" selected>Medium</option>
+        		<option value="Hard">Hard</option>
+        		<option value="Intense">Intense</option>
+    		</select>
+    	</label>
+    </div>
+	</center>
+</body>
+</html>
