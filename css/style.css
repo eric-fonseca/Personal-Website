@@ -21,6 +21,13 @@ h1, h2, p{
 	background: linear-gradient(135deg, #132160 0%,#70bad1 66%,#F3F3F3 100%);
 	text-align: center;
 }
+#home h1{
+	font-size: 120px; 
+	font-weight: 900;
+}
+#home h2{
+	font-size: 46px;
+}
 #about{
 	background-color: #8ED2E6;
     border-top: 2px dotted #888888;
@@ -63,19 +70,20 @@ h1, h2, p{
 }
 #navList{
 	height: 100%;
-    width: 1010px;
+    width: 992px;
     list-style: none;
     margin: 0 auto;
     padding: 0;
 }
 #navList li{
 	float: left;
-    width: 210px;
+    width: 205px;
     height: 100%;
     font-size: 26px;
     font-weight: 900;
     position: relative;
     top: 32%;
+    z-index: 2;
 }
 #navList li:nth-child(2){
 	margin-right: 85px;
@@ -130,4 +138,97 @@ iframe {
 .tooltip.top {
 	font-size: 18px;
 	margin-top: -20px;
+}
+
+@media screen and (max-width: 991px) {
+    #navList{
+    	width: 768px;
+    }
+    #navList li{
+    	width: 160px;
+    }
+    #navList li:nth-child(2){
+    	margin-right: 64px;
+    }
+    #navList li:nth-child(3){
+    	margin-left: 64px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #home h1{
+    	font-size: 98px;
+    }
+    #logo{
+		width: 128px;
+		height: 128px;
+		bottom: -14px;
+		margin-left: -73px;
+		background-size: 64px;
+    }
+    #navList{
+    	width: 556px;
+    }
+    #navList li{
+    	width: 110px;
+    	font-size: 24px;
+    }
+    #navList li:nth-child(2){
+    	margin-right: 45px;
+    }
+    #navList li:nth-child(3){
+    	margin-left: 45px;
+    }
+    #about div{
+    	text-align: center;
+    }
+    #about img{
+    	float: none;
+    	margin: 0px 0px 10px 0px;
+    }
+    #footer{
+		width: 400px;
+	}
+	#footer img{
+		width: 45px;
+		margin: 22px 15px 15px 15px;
+	}
+}
+
+@media screen and (max-width: 555px) {
+    .intro{
+    	padding-top: 20px;
+    	top: 5%;
+    }
+    #home h1{
+    	font-size: 98px;
+    }
+    #home h2{
+    	font-size: 38px;
+    }
+    #intro-btn{
+    	margin-top: 60px;
+    }
+    #navbar{
+    	height: 80px;
+    }
+    #logo{
+    	display: none;
+    }
+    #navBar{
+    	height: 80px;
+    }
+    #navList{
+    	width: 400px;
+    }
+    #navList li{
+    	width: 96px;
+    	font-size: 20px;
+    }
+    #navList li:nth-child(2){
+    	margin-right: 0px;
+    }
+    #navList li:nth-child(3){
+    	margin-left: 0px;
+    }
 }
