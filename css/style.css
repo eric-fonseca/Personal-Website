@@ -4,8 +4,6 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	width: 100%;
-	height: 100%;
 }
 h1, h2, p{
 	margin: 0;
@@ -17,19 +15,29 @@ h1, h2, p{
 .container-fluid{
 	padding: 0;
 }
-.section{
-	width: 100%;
-	margin: 0 auto;
-}
-.contentPic{
-	background-color: orange; 
-	height: 640px;
-}
 #home{
 	width: 100%;
 	height: 500px;
 	background: linear-gradient(135deg, #132160 0%,#70bad1 66%,#F3F3F3 100%);
 	text-align: center;
+}
+#about{
+	background-color: #8ED2E6;
+    border-top: 2px dotted #888888;
+	font-size: 18px;
+    color: #304D5F;
+}
+#about div{
+	min-height: 286px;
+	max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#about img{
+	width: 252px;
+	border-radius: 50%;
+	margin-right: 15px;
+	float: left;
 }
 .intro{
 	position: relative;
@@ -62,12 +70,18 @@ h1, h2, p{
 }
 #navList li{
 	float: left;
-    width: 250px;
+    width: 210px;
     height: 100%;
     font-size: 26px;
     font-weight: 900;
     position: relative;
     top: 32%;
+}
+#navList li:nth-child(2){
+	margin-right: 85px;
+}
+#navList li:nth-child(3){
+	margin-left: 85px;
 }
 #navList li a{
 	display: block;
@@ -94,11 +108,26 @@ h1, h2, p{
 	bottom: -25px;
 	margin-left: -75px;
     background: #FFF url("../img/logo.svg") center no-repeat;
-    /*border: 4px solid #8E76D8;*/
     border-radius: 50%;
     z-index: 1;
+}
+#footer{
+	margin: 0 auto;
+	width: 470px;
+}
+#footer img{
+	width: 50px;
+	margin: 20px;
+}
+#footer img:hover{
+	cursor: pointer;
+	opacity: 0.8;
 }
 iframe {
     overflow: hidden;
     display: block;
+}
+.tooltip.top {
+	font-size: 18px;
+	margin-top: -20px;
 }

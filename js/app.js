@@ -1,6 +1,8 @@
 var app = angular.module("PortfolioApp", []);
 
 $(document).ready(function() {
+    $("[data-toggle='tooltip']").tooltip();
+
 	$("a[href^='#']").on("click", function(e){
 		var target = $($(this).attr("href"));
 		if(target.length){
@@ -17,9 +19,17 @@ $(document).ready(function() {
 		$("#previewContainer").slideUp("slow", function(){
 			$(content).slideDown("slow");
 			
+			$("html, body").animate({
+				scrollTop: $("#work").offset().top
+			}, 700);
+			
 			$(content + ", .work").on("click", function(){
 				$(content).slideUp("slow", function(){
 					$("#previewContainer").slideDown();
+					
+					$("html, body").animate({
+						scrollTop: $("#work").offset().top
+					}, 700);
 				});
 			});
 		});

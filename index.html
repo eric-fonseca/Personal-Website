@@ -18,21 +18,21 @@
 </head>
 <body ng-app="PortfolioApp">
 	<div id="home">
-		<h1 class="intro animated bounceInDown" style="font-size: 120px; font-weight: 900;">Eric Fonseca</h1>
-		<h2 class="intro animated flipInX" style="font-size: 46px;">Design. Development. Dedication.</h2>
-		<a href="#work" class="btn work animated bounceInUp" id="intro-btn" role="button">View Work</a>
+		<h1 class="intro" style="font-size: 120px; font-weight: 900;">Eric Fonseca</h1>
+		<h2 class="intro" style="font-size: 46px;">Design. Development. Dedication.</h2>
+		<a href="#work" class="btn work" id="intro-btn" role="button">View Work</a>
 	</div>
 	<div id="navBar">
 		<a href="#home" id="logo"></a>
 		<ul id="navList">
 			<li><a href="#work" class="work">WORK</a></li>
-			<li style="padding-right: 130px"><a href="EricFonsecaResume.pdf" target="_blank">RESUME</a></li>
-			<li style="padding-left: 130px"><a href="#about">ABOUT</a></li>
+			<li><a href="EricFonsecaResume.pdf" target="_blank">RESUME</a></li>
+			<li><a href="#about">ABOUT</a></li>
 			<li><a href="#contact">CONTACT</a></li>
 		</ul>
 	</div>
 	
-	<div style="background-color: #B5EEFF;" class="section" id="work"> <!--#69C8BA-->
+	<div style="background-color: #B5EEFF;" id="work"> <!--#69C8BA-->
 		<div id="previewContainer">
 			<div ng-controller="MainController">
 				<div class="row">
@@ -54,12 +54,27 @@
 		</div>
 	</div>
 	
-	<div style="background-color: green; height: 600px;" class="section" id="about">
-	
+	<div id="about">
+		<div>
+			<img src="img/profile.jpg"/>
+			<h1 style="padding-bottom:10px">About</h1>
+			<p>Eric Fonseca is a senior at Rochester Institute of Technology where he is currently majoring in 
+			<a href="https://www.rit.edu/programs/new-media-interactive-development-bs" target="_blank">New Media Interactive Development</a> with minors in Advertising and Public Relations as well as 
+			Game Design and Development. Over the past two years, he attained co-ops with Excellus BlueCross BlueShield 
+			and RIT's Golisano Institute for Sustainability where he pursued his passions for digital marketing and 
+			front-end web development. Eric spends his free time traveling and volunteering for the Pet Adoption Network where he 
+			fosters cats and kittens. </p>
+		</div>
 	</div>
 	
-	<div style="background-color: red; height: 200px;" class="section" id="contact">
-	
+	<div style="background-color: #444; height: 100px;" id="contact">
+		<div id="footer">
+			<a href="https://github.com/eric-fonseca" data-toggle="tooltip" title="Github" target="_blank"><img src="img/github.png"/></a>
+			<a href="https://www.linkedin.com/in/eric-fonseca-b4830b71" data-toggle="tooltip" title="LinkedIn" target="_blank"><img src="img/linkedin.png"/></a>
+			<a href="EricFonsecaResume.pdf" data-toggle="tooltip" title="Resume" target="_blank"><img src="img/resume.png"/></a>
+			<a href="tel://1-585-451-0190" data-toggle="tooltip" title="585 - 451 - 0190"><img src="img/phone.png"/></a>
+			<a href="mailto:eric@eric-fonseca.com" data-toggle="tooltip" title="eric@eric-fonseca.com"><img src="img/email.png"/></a>
+		</div>
 	</div>
 </body>
 </html>
