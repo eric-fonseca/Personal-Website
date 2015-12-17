@@ -118,6 +118,10 @@ h1, h2, p{
     border-radius: 50%;
     z-index: 1;
 }
+#contact{
+	background-color: #444; 
+	height: 100px;
+}
 #footer{
 	margin: 0 auto;
 	width: 470px;
@@ -141,7 +145,7 @@ iframe {
 .tag{
 	border: 2px solid #457796;
     padding: 2px 10px;
-    margin: 0px 2px;
+    margin: 2px;
     border-radius: 20px;
     color: #457796;
     display: inline-block;
@@ -275,5 +279,27 @@ iframe {
     }
     #navList li:nth-child(3){
     	margin-left: 0px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #home h1{
+    	font-size: 85px;
+    }
+    #home h2{
+    	font-size: 35px;
+    }
+    #navBar{
+    	height: 60px;
+    }
+    #navList li{
+    	width: 78px;
+    	font-size: 16px;
+    }
+    #footer img{
+    	width: 35px;    
+    	margin: 20px 10px 10px 15px;
+    }
+    #contact{
+    	height: 80px;
     }
 }

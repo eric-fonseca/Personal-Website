@@ -1,7 +1,9 @@
 var app = angular.module("PortfolioApp", []);
 
 $(document).ready(function() {
-    $("[data-toggle='tooltip']").tooltip();
+	if(!("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch)){
+		$("[data-toggle='tooltip']").tooltip();
+	}
 
 	$("a[href^='#']").on("click", function(e){
 		var target = $($(this).attr("href"));
