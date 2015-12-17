@@ -30,7 +30,6 @@ h1, h2, p{
 }
 #about{
 	background-color: #8ED2E6;
-    border-top: 2px dotted #888888;
 	font-size: 18px;
     color: #304D5F;
 }
@@ -168,6 +167,22 @@ iframe {
 	vertical-align: top; 
 	margin-right: 5px; 
 	width: 24px;
+}
+.projectInfo{
+	font-size: 18px;
+    width: 70%;
+    margin: 20px auto;
+}
+.returnLink{
+	height: 40px;
+    background-color: #457796;
+    text-align: center;
+    color: white;
+    padding-top: 7px;
+    font-size: 18px;
+}
+.returnLink:hover{
+	cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {

@@ -48,7 +48,9 @@
 		<div ng-controller="MainController">
 			<div ng-repeat="project in projects" class="details" id="{{project.id}}Content" style="display: none">
 				<project-info info="project"></project-info>
-			</div>
+				<div class="returnLink">
+					<span class="glyphicon glyphicon-arrow-up"></span> Back to Projects <span class="glyphicon glyphicon-arrow-up"></span></div>
+				</div>
 		</div>
 		
 		<div style="display: none;" class="row content">

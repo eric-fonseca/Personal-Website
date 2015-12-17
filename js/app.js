@@ -23,7 +23,7 @@ $(document).ready(function() {
 				scrollTop: $("#work").offset().top
 			}, 700);
 			
-			$(".work").on("click", function(){
+			$(".work, .returnLink").on("click", function(){
 				$(content).slideUp("slow", function(){
 					$("#previewContainer").slideDown();
 					
