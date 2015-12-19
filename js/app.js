@@ -25,14 +25,15 @@ $(document).ready(function() {
 				scrollTop: $("#work").offset().top
 			}, 700);
 			
-			$(".work, .returnLink").on("click", function(){
+			$(".work, .returnLink").on("click", function hideProject(){
 				$(content).slideUp("slow", function(){
 					$("#previewContainer").slideDown();
-					
+				
 					$("html, body").animate({
 						scrollTop: $("#work").offset().top
 					}, 700);
 				});
+				$(".work, .returnLink").off("click", hideProject);
 			});
 		});
 	});
