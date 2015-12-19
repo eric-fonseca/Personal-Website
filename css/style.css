@@ -18,8 +18,11 @@ h1, h2, p{
 #home{
 	width: 100%;
 	height: 500px;
-	background: linear-gradient(135deg, #132160 0%,#70bad1 66%,#F3F3F3 100%);
 	text-align: center;
+	background: #70bad1; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #132160 0%, #70bad1 66%, #f3f3f3 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #132160 0%,#70bad1 66%,#f3f3f3 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #132160 0%,#70bad1 66%,#f3f3f3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 #home h1{
 	font-size: 120px; 
