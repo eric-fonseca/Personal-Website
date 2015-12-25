@@ -31,6 +31,9 @@ h1, h2, p{
 #home h2{
 	font-size: 46px;
 }
+#work{
+	background-color: #B5EEFF;
+}
 #about{
 	background-color: #8ED2E6;
 	font-size: 18px;
@@ -47,6 +50,9 @@ h1, h2, p{
 	border-radius: 50%;
 	margin-right: 15px;
 	float: left;
+}
+#about h1{
+	padding-bottom: 10px;
 }
 .intro{
 	position: relative;
@@ -103,8 +109,19 @@ h1, h2, p{
 	color: #9343B1;
 }
 .previewImg{
+	position: relative;
+    margin-top: 25px;
+}
+.previewImg img{
 	width: 100%;
-	margin-top: 25px;
+}
+.previewImg img:nth-child(1){
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+.previewImg img:nth-child(2){
+	margin-top: 12%;
 }
 .previewImg:hover{
 	cursor: pointer;
@@ -117,7 +134,7 @@ h1, h2, p{
 	left: 50%;
 	bottom: -25px;
 	margin-left: -75px;
-    background: #FFF url("../img/logo.svg") center no-repeat;
+    background: #FFF url("../img/icons/logo.svg") center no-repeat;
     border-radius: 50%;
     z-index: 1;
 }
@@ -176,6 +193,21 @@ iframe {
 	width: 24px;
 }
 .projectInfo{
+	text-align: center; 
+	padding: 20px 0px 40px 0px;
+}
+.projectInfo > img{
+	width: 100%; 
+	max-width: 800px;
+}
+.projectInfo h1{
+	margin-bottom: 10px;
+}
+.projectInfo ul{
+	list-style: none; 
+	padding-left: 0px;
+}
+.projectInfo p{
 	font-size: 18px;
     width: 70%;
     margin: 20px auto;

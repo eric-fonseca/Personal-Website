@@ -16,7 +16,7 @@ $(document).ready(function() {
 	});
 	
 	$(".previewImg").on("click", function(e){
-		var content = "#" + e.target.id + "Content";
+		var content = "#" + $(e.target).parent().attr("id") + "Content";
 	
 		$("#previewContainer").slideUp("slow", function(){
 			$(content).slideDown("slow");

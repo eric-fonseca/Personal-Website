@@ -6,17 +6,10 @@
   	<link rel="stylesheet" type="text/css" href="css/pace.css"/>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="img/favicon.png">
+	<link rel="icon" href="img/icons/favicon.png">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,900,100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/controllers/MainController.js"></script>
-	<script src="js/directives/projectInfo.js"></script>
 </head>
 <body ng-app="PortfolioApp">
 	<div id="home">
@@ -34,12 +27,17 @@
 		</ul>
 	</div>
 	
-	<div style="background-color: #B5EEFF;" id="work">
+	<div id="work">
 		<div id="previewContainer">
 			<div ng-controller="MainController">
 				<div class="row">
 					<div ng-repeat="project in projects" class="col-xs-12 col-sm-6 col-md-4">
-						<a href="#work"><img class="previewImg" id="{{project.id}}" ng-src="{{project.preview}}"></a>
+						<a href="#work"><div class="previewImg" id="{{project.id}}">
+						
+							<img ng-src="{{project.preview}}"/>
+							<img ng-src="{{project.image}}"/>
+						
+						</div></a>
 					</div>
 				</div>
 			</div>
@@ -49,8 +47,9 @@
 			<div ng-repeat="project in projects" class="details" id="{{project.id}}Content" style="display: none">
 				<project-info info="project"></project-info>
 				<div class="returnLink">
-					<span class="glyphicon glyphicon-arrow-up"></span> Back to Projects <span class="glyphicon glyphicon-arrow-up"></span></div>
+					<span class="glyphicon glyphicon-arrow-up"></span> Back to Projects <span class="glyphicon glyphicon-arrow-up"></span>
 				</div>
+			</div>
 		</div>
 		
 		<div style="display: none;" class="row content">
@@ -60,25 +59,33 @@
 	
 	<div id="about">
 		<div>
-			<img src="img/profile.jpg"/>
-			<h1 style="padding-bottom:10px">About</h1>
+			<img src="img/icons/profile.jpg"/>
+			<h1>About</h1>
 			<p>Eric Fonseca is a senior at Rochester Institute of Technology where he is currently majoring in 
 			<a href="https://www.rit.edu/programs/new-media-interactive-development-bs" target="_blank">New Media Interactive Development</a> 
 			with minors in Advertising and Public Relations as well as Game Design and Development. Over the past two years, he attained 
 			co-ops with Excellus BlueCross BlueShield and RIT's Golisano Institute for Sustainability where he pursued his passion for 
 			design and front-end web development. Eric spends his free time traveling and volunteering for the Pet Adoption Network where 
-			he fosters cats and kittens. </p>
+			he fosters cats and kittens.</p>
 		</div>
 	</div>
 	
 	<div id="contact">
 		<div id="footer">
-			<a href="https://github.com/eric-fonseca" data-toggle="tooltip" title="Github" target="_blank"><img src="img/github.png"/></a>
-			<a href="https://www.linkedin.com/in/eric-fonseca-b4830b71" data-toggle="tooltip" title="LinkedIn" target="_blank"><img src="img/linkedin.png"/></a>
-			<a href="mailto:eric@eric-fonseca.com" data-toggle="tooltip" title="eric@eric-fonseca.com"><img src="img/email.png"/></a>
-			<a href="tel://1-585-451-0190" data-toggle="tooltip" title="585 - 451 - 0190"><img src="img/phone.png"/></a>
-			<a href="EricFonsecaResume.pdf" data-toggle="tooltip" title="Resume" target="_blank"><img src="img/resume.png"/></a>
+			<a href="https://github.com/eric-fonseca" data-toggle="tooltip" title="Github" target="_blank"><img src="img/icons/github.png"/></a>
+			<a href="https://www.linkedin.com/in/eric-fonseca-b4830b71" data-toggle="tooltip" title="LinkedIn" target="_blank"><img src="img/icons/linkedin.png"/></a>
+			<a href="mailto:eric@eric-fonseca.com" data-toggle="tooltip" title="eric@eric-fonseca.com"><img src="img/icons/email.png"/></a>
+			<a href="tel://1-585-451-0190" data-toggle="tooltip" title="585 - 451 - 0190"><img src="img/icons/phone.png"/></a>
+			<a href="EricFonsecaResume.pdf" data-toggle="tooltip" title="Resume" target="_blank"><img src="img/icons/resume.png"/></a>
 		</div>
 	</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/MainController.js"></script>
+<script src="js/directives/projectInfo.js"></script>
+	
 </body>
 </html>
