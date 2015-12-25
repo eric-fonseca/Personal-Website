@@ -1,5 +1,5 @@
 <div class="projectInfo">
-	<img ng-src="{{info.image}}">
+	<img ng-src="{{info.preview}}">
 	<h1>{{info.title}}</h1>
 	<ul>
 		<li ng-repeat="tag in info.tags" class="tag">{{tag}}</li>
@@ -7,9 +7,9 @@
 	<p><b>Objective:</b> {{info.objective}}</p>
 	<p><b>Description:</b> {{info.description}}</p>
 	<div ng-if="info.link !== 'None'" class="btnLink">
-		<a href="{{info.link}}" target="_blank"><img src="img/website.png"/>View Project</a>
+		<a href="{{info.link}}" target="_blank"><img src="img/icons/website.png"/>View Project</a>
 	</div>
 	<div ng-if="info.github !== 'None'" class="btnLink">
-		<a href="{{info.github}}" target="_blank"><img src="img/github.png"/>View Github</a>
+		<a href="{{info.github}}" target="_blank"><img src="img/icons/github.png"/>View Github</a>
 	</div>
 </div>
